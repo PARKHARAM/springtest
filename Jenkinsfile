@@ -4,7 +4,7 @@ pipeline{
     agent{
         kubernetes{
             inheritFrom 'test'
-            defaultContainer 'test'
+            //defaultContainer 'test'
         }
     }
     
