@@ -13,7 +13,7 @@ pipeline{
         {
             steps{
                 echo "Current workspace : ${workspace}"
-                sh 'mvn -version'
+                //sh 'mvn -version'
             }
         }
         
