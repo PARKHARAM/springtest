@@ -4,7 +4,7 @@ pipeline{
     agent{
         kubernetes{
             inheritFrom 'jenkins-slave'
-            defaultContainer 'jenkins-slave'
+            defaultContainer 'test'
         }
     }
     
@@ -13,7 +13,7 @@ pipeline{
         {
             steps{
                 echo "Current workspace : ${workspace}"
-                sh "mvn -version"
+                sh 'mvn -version'
             }
         }
         
