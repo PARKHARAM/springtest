@@ -27,10 +27,18 @@ pipeline{
         stage('build')
         {
             steps{
+                sh 'pwd' 
                 sh 'mvn clean package -Dmaven.test.skip=true'
+                sh 'ls -al'
+                dir('target'){
+                   sh 'pwd'
+                   sh 'ls -al'
+                }
             }
             
         }   
+        
+        
         
     }
     
