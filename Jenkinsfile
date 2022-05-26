@@ -23,6 +23,15 @@ pipeline{
                 checkout scm
             }
         }
+        
+        stage('build')
+        {
+            steps{
+                sh 'mvn clean package -Dmaven.test.skip=true'
+            }
+            
+        }   
+        
     }
     
 }
