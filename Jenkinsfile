@@ -3,7 +3,7 @@
 pipeline{
     agent{
         kubernetes{
-            inheritFrom 'test'
+            inheritFrom 'jenkins-slave'
             //defaultContainer 'test'
         }
     }
